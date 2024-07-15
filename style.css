@@ -1,13 +1,53 @@
 * {
-    padding: auto;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
+/* Navbar */
+.navbar-brand {
     font-family: "Permanent Marker", cursive;
+    font-size: 35px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(222, 0, 74),
+            #f867f8);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: crimson;
+}
+
+.navbutton {
+    color: crimson;
+    border: 2px solid crimson;
+    background: transparent;
+    width: 100%;
+    transition: 1s;
+}
+
+.navbutton:hover {
+    color: white;
+    background-color: crimson;
+}
+
+.modal-title {
+    font-family: signika;
+    font-weight: bold;
+    color: crimson;
+}
+
+/* Background Image */
 .background-image {
     background-image: url('images/pexels-pixabay-458766.jpg');
     background-size: cover;
@@ -23,64 +63,69 @@ body {
 }
 
 .background-image h1 {
-    margin: 0;
-}
-
-.background-image h1:first-child {
-    color: crimson;
-    margin-top: 12%;
-    font-size: 60px;
+    font-size: 3rem;
     font-family: signika;
+    font-weight: bold;
+    color: crimson;
+}
+.background-image h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Signika', sans-serif;
     font-weight: bold;
 }
 
-.background-image h1:last-child {
-    font-family: 'Signika', sans-serif;
+@media (max-width: 768px) {
+    .background-image h1 {
+        font-size: 2rem;
+        font-family: signika;
+        font-weight: bold;
+        color: crimson;
+    }
+    .background-image h2 {
+        font-size: 1.25rem;
+        font-family: 'Signika', sans-serif;
+    font-weight: bold;
+    }
+}
+@media (max-width: 576px) {
+    .background-image h1 {
+        font-size: 1.75rem;
+        font-family: signika;
+        font-weight: bold;
+        color: crimson;
+    }
+    .background-image h2 {
+        font-size: 1rem;
+        font-family: 'Signika', sans-serif;
+    font-weight: bold;
+    }
 }
 
-.background-btn{
+.background-button {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
+    display: inline-block;
     border: 2px solid white;
     border-radius: 25px;
     background: transparent;
     margin: 10px;
     padding: 8px 28px;
-    transition: 1s;
+    transition: 0.6s all;
 }
 
-.background-btn:hover {
+.background-button:hover {
     color: white;
     border: 2px solid rgb(222, 0, 74);
-    background: crimson;
+    background: rgb(222, 0, 74);
 }
 
 .crimson {
     color: crimson;
     font-family: "Signika", sans-serif;
-}
-    
-#crimson-button {
-    text-decoration: none;
-    color: crimson;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 500;
-    border: 2px solid crimson;
-    border-radius: 25px;
-    background: white;
-    margin: 10px;
-    padding: 8px 28px;
-    transition: 1s;
-}
-
-#crimson-button:hover {
-    color: white;
-    border: 2px solid rgb(222, 0, 74);
-    background: crimson;
 }
 
 .active-filter-btn {
@@ -89,8 +134,24 @@ body {
     border-color: crimson !important;
 }
 
-.img-fluid {
-    width: 100%;
+.button {
+    text-decoration: none;
+    color: crimson;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    border: 2px solid crimson;
+    border-radius: 25px;
+    background: transparent;
+    margin: 10px;
+    padding: 8px 28px;
+    transition: 0.6s all;
+}
+
+.button:hover {
+    color: white;
+    border: 2px solid rgb(222, 0, 74);
+    background: rgb(222, 0, 74);
 }
 
 .overlay-container {
@@ -104,12 +165,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: add background for better readability */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Optional: add background for better readability */
     padding: 20px;
     border-radius: 10px;
 }
 
-.btn {
+.button {
     padding: 10px 20px;
     margin: 5px;
 }
@@ -118,13 +180,14 @@ body {
     font-weight: bold;
 }
 
-/* .card {
+img {
     transition: all 0.3s;
 }
 
-.card:hover {
+img:hover {
     transform: scale(1.10);
-} */
+    border-radius: 10px;
+}
 
 .custom-card {
     margin: 15px 15px;
@@ -145,4 +208,10 @@ body {
 
 .star-rating i {
     color: gold;
+}
+
+/* Footer */
+h5,
+strong {
+    color: crimson;
 }
